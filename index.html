@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Survey Form</title>
 </head>
 <body>
-    <div class="main-div">
-        <div class="form-header">
-            <h1>Survey Form:</h1>
-        </div>
-        
-        <div class="form-main">
-            <div class="name">
-                <h4>Customer Name</h4>
-                <input type="text" name="First Name" id="firstName">
-                <label for="First Name">Enter your First Name</label>
-                <input type="text" name="Last Name" id="lastName">
-                <label for="Last Name">Enter your Last Name</label>
-            </div>
-            <div class="address">
-                <h4>Address</h4>
-                <input type="text" name="" id="">
-                <label for="">Street Address</label>
-                <input type="text" name="" id="">
-                <label for="">Street Address Line 2</label>
-                <input type="text" name="" id="">
-                <label for="">City</label>
-                <input type="text" name="" id="">
-                <label for="">State</label>
-                <input type="text" name="" id="">
-                <label for="">Zip</label>
-
-            </div>
-
-        </div>
-
+    <div class="header">
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description">Thank you for taking the time to help us improve the platform</p>
     </div>
+    <form action="" id="survey-form">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
+        <label for="email" id="email-label">Email</label>
+        <input type="Email" name="email" id="email" placeholder="Enter your email" required>
+        <label for="age" id="number-label">Age</label>
+        <input type="number" name="age" id="number" placeholder="age" min="10" max="99">
+        <label for="role" id="role-label">Which option best describes your current role?</label>
+        <select name="role" id="dropdown">
+            <option disabled selected>Select current role</option>
+            <option value="Student">Student</option>
+            <option value="Full time job">Full time job</option>
+            <option value="Full time learner">Full time learner</option>
+            <option value="Prefer not to say">Prefer not to say</option>
+            <option value="Other">Other</option>
 
-    
+        </select>
+        
+            <label for="" id="radiobtn">Would you receommend freeCodeCamp to a friend?</label>
+            <div id="radio1" class="radio"><input type="radio" name="recommend" id="" value="Definitely"><label for="Definitely"> Definitely</label></div>
+            <div id="radio2" class="radio"><input type="radio" name="recommend" id="" value="Maybe"><label for="Maybe"> Maybe</label></div>
+            <div id="radio3" class="radio"><input type="radio" name="recommend" id="" value="Not sure"><label for="Not sure"> Not sure</label></div>
+        
+
+        <label for="improvement">What would you liek to see improved? (check all that apply)</label>
+        <div class="check1 check"><input type="checkbox" name="front-end" id="" value="front-end"><label for="front-end" > front-end projects</label></div>
+        <div class="check2 check"><input type="checkbox" name="back-end" id="" value="back-end"><label for="back-end"> back-end projects</label></div>
+        <div class="check3 check"><input type="checkbox" name="data-visualization" id="" value="data-visualization"><label for="data-visualization"> data-visualization</label></div>
+        
+        <label for="">Any comments or suggestions?</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <button type="submit" id="submit">Submit</button>
+    </form>
 </body>
 </html>
+
